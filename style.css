@@ -10,8 +10,10 @@ body{
 }
 .head{
     width: 100%;
+    min-width: 340px;
     background: #F5F5F6;
-    height: 50px;
+    min-height: 50px;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,6 +24,7 @@ body{
     width: 89px;
     height: 23px;
 }
+
 .head-list{
     margin: 0 10px;
     display: inline-block;
@@ -49,8 +52,109 @@ body{
     transition: .2s;
 }
 
+.main{
+    margin: 56px auto;
+    max-width: 701px;
+    min-width: 340px;
+    padding: 0 30px;
+}
+h1{
+    font-size: 36px;
+    margin-bottom: 33px;
+}
+.main-input-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.main-input-container>div{
+    width: 259px;
+}
+#first-div,#second-div{
+    margin-right: 25px;
+    margin-bottom: 50px;
+}
+.main-div>p{
+    color: #9F9F9F;
+    font-size: 12px;
+    line-height: 28px;
+}
+.button-container{
+    margin: 1px 0 20px 0;
+    position: relative;
+    left: 4px;
+}
+.button-container>button{
+    width: 25%;
+    height: 30px;
+    color: #C6C6C6;
+    font-size: 12px;
+    margin-left: -4.6px;
+    border: 1px solid #E5E5E5;
+    border-right: none;
+    background-color: transparent;
+}
+.button-container button:first-child{
+    border-radius: 3px 0 0 3px;
+}
+.button-container button:last-child{
+    border-radius: 0 3px 3px 0;
+    border: 1px solid #E5E5E5;
+}
+.button-container>button:hover{
+    color: white;
+    background-color: #833AE0;
+    border-color: #833AE0;
+}
+.qiymet-container{
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    padding: 11px 0 5px 14px;
+}
+.qiymet{
+    width: 150px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+}
+
+/* Bu hissedeki kod input(number)-in yaninda cixan oxlari silir*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.valyuta{
+    margin-left: 2px;
+    font-size: 12px;
+    line-height: 28px;
+    color: #C6C6C6;
+}
+
+
 @media (max-width: 998px){
     .head-list{
         line-height: 10px;
+    }
+}
+@media (max-width: 713px){
+    .head-btn{
+        margin-right: 40px;
+        margin-left: 20px;
+    }
+    .logo{
+        margin-right: 20px;
+        margin-left: 40px;
+    }
+}
+@media (max-width: 628px){
+    .main-input-container{
+        justify-content: center;
+    }
+    h1{
+        text-align: center;
     }
 }
